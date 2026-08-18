@@ -1,6 +1,5 @@
 # tests/lexer/test_lexer.py
-from algolang.lexer.tokens import TokenType
-from algolang.lexer.lexer import Lexer
+from algolang.lexer import Lexer, LexerError, Token, TokenType
 
 SRC = """
 read n
