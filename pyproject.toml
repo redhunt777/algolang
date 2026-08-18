@@ -1,0 +1,26 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name        = "algolang"
+version     = "0.1.0"
+description = "Competitive Programming Compiler & Static Analyzer"
+readme      = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "typer[all]>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[project.scripts]
+algolang = "algolang.cli.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["algolang*"]
